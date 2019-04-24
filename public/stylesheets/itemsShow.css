@@ -1,0 +1,47 @@
+body {
+    background-color: #F4F4F4;
+    overflow-x: hidden;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+.itemCard {
+    background-color: white;
+    border: solid #F4F4F4 5px;
+    margin-top: 15px;
+}
+
+.login {
+    margin-right: 2%;
+}
+
+
+.col-4, .col-1, .col-2 {
+    margin: 0;
+}
+
+
+.row {
+    margin-bottom: 10px;
+    align-content: center;
+}
+
+.btn {
+    padding: 0 5px 0 5px;
+    margin-left: 10px;
+}
+
+.btn-success {
+    border: solid 0.5px #454545;
+    color: #454545;
+    background-color: white;
+    height: 26px;
+}
+
+
+.btn-success:hover {
+    border: none;
+    color: white;
+    background-color: #454545;
+    animation: none;
+}

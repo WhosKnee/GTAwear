@@ -1,0 +1,32 @@
+html {
+    overflow-x: hidden;
+}
+
+.col-md-6 {
+    padding: 0;
+}
+
+.text {
+    font-weight: 100;
+}
+
+#titleArea {
+    background-color: #F4F4F4;
+    opacity: 30%;
+}
+
+#title {
+    margin-top: 40%;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+
+@media screen and (max-width: 575px) {
+    #title {
+        margin: 5%;
+    }
+    #titleArea{
+        background-color: #EDEDED;
+    }
+  }

@@ -1,0 +1,63 @@
+<!DOCTYPE>
+<html>
+    <header>
+        <title>Items</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/itemsShow.css" crossorigin="anonymous">
+        <script link="./scripts/itemShow"></script>
+    </header>
+
+    <body>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">GTA Wear</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Items <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                    </ul>
+                    <a class="login" href="/login">Login</a>
+                    <a href="/register">Sign up</a>
+                </div>
+            </nav>
+        <a href="/items/new">Create new item</a>
+        <form action="/items/sort" method="POST">
+            <span>
+                <select name="sortBy">
+                    <option value="PLTH">Price - Low to High</option>
+                    <option value="PHTL">Price - High to Low</option>
+                    <option value="AtoZ">A to Z</option>
+                    <option value="ZtoA">Z to A</option>
+                </select>
+                <input type="submit" value="Sort Items">
+            </span>
+            <br><br>
+        </form>
+        <div class="row">
+            <% items.forEach(function(item){ %>
+                <div class="itemCard col-md-2 col-6">
+                    <img src="<%=item.image%>" style="height: 80px; margin-top: 2px; margin-left: 2px; margin-right: 2px">
+                    <p><%= item.name %> - $<%= item.price %>.00</p>
+                    <div class="row">
+                        
+                        <p class="col-6 col-lg-4 btn btn-warning">Likes: <%= item.likes %></p>
+                        <p class="col-lg-2" ></p>
+                        <a class="col-6 col-lg-4 btn btn-success" href="/items/<%= item._id %>/edit">Edit</a> 
+
+                    </div>
+                    
+                </div>
+            <% }) %>
+        </div>
+    </body>
+</html>

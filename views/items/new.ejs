@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Items</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </header>
+
+    <body>
+        <p>New Item Form</p>
+        <form action="/items" method="POST">
+            <div class="form-group">
+                <input type="text" name="item[name]" placeholder="Item name">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" name="item[image]" placeholder="Item Photo">
+            </div>
+           
+            <div class="form-group">
+                <input type="number" name="item[price]" min="1" placeholder="Item Price">
+            </div>
+            
+            <button class="btn btn-secondary">Create item</button>
+        </form>
+    </body>
+</html>
